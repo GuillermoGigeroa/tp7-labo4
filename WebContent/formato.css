@@ -21,9 +21,6 @@ a {
     text-decoration: none;
     color: white;
     padding: 5px;
-    border-width: 3px;
-    border-style: solid;
-    border-color: rgb(112, 114, 112);
     font-weight: bold;
     width: 15%;
     text-align: center;
@@ -36,7 +33,6 @@ h2 {
 
 .navbar {
     margin: 0;
-    padding: 5px;
     width: 100%;
     height: auto;
     display: flex;
@@ -49,7 +45,7 @@ h2 {
 }
 
 .colorSecundario {
-    background-color: rgb(72, 77, 72);
+    background-color: rgb(96, 101, 96);
 }
 
 .colorTerciario {
@@ -85,7 +81,7 @@ form {
 }
 
 .activo {
-	background-color: rgb(93, 93, 93);
+	background-color: rgb(128, 132, 128);
 }
 
 .mitad {
@@ -110,7 +106,7 @@ form {
 }
 
 .bordes {
-    border-radius: 10px;
+    border-radius: 9px;
 }
 
 .menu {
