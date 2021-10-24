@@ -13,6 +13,10 @@ li {
     list-style: none;
 }
 
+table {
+    padding: 2px;
+}
+
 a {
     text-decoration: none;
     color: white;
@@ -23,7 +27,6 @@ a {
     font-weight: bold;
     width: 15%;
     text-align: center;
-
 }
 
 h2 {
@@ -79,6 +82,10 @@ form {
 
 .separar {
 	margin-right: 10px;
+}
+
+.activo {
+	background-color: rgb(93, 93, 93);
 }
 
 .mitad {

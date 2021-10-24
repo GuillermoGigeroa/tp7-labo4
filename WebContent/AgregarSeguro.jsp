@@ -11,7 +11,7 @@
 <body class="colorTerciario">
 	<div class="navbar colorPrimario menu">
 		<a class="colorSecundario separar bordes" href="Inicio.jsp">Inicio</a>
-		<a class="colorSecundario separar bordes" href="AgregarSeguro.jsp">Agregar seguro</a>
+		<a class="colorSecundario separar bordes activo" href="AgregarSeguro.jsp">Agregar seguro</a>
 		<a class="colorSecundario separar bordes" href="ListarSeguro.jsp">Listar seguros</a>
 	</div>
 	<div class="contenido colorTerciario">
