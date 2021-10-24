@@ -1,10 +1,56 @@
-ul {
+* {
     margin: 0;
     padding: 0;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap');
+
+body {
+    font-family: 'Zen Kurenaido', sans-serif;
+}
+
 li {
     list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: rgb(112, 114, 112);
+    font-weight: bold;
+    width: 15%;
+    text-align: center;
+
+}
+
+h2 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.navbar {
+    margin: 0;
+    padding: 5px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-content: left;
+}
+
+.colorPrimario {
+    background-color: rgb(79, 84, 79);
+}
+
+.colorSecundario {
+    background-color: rgb(72, 77, 72);
+}
+
+.colorTerciario {
+    background-color: rgb(218, 218, 218);
 }
 
 .left {
@@ -31,30 +77,20 @@ form {
     padding: 5px;
 }
 
-.titulo>a {
-    border-style: solid;
-    border-color: black;
-    border-width: 1px;
-    border-radius: 10px;
-    background-color: lightgray;
-    padding: 5px;
-    width: 150px;
-    text-align: center;
-    text-decoration: none;
-    color: black;
-    margin: 5px;
-}
-
 .separar {
 	margin-right: 10px;
 }
 
 .mitad {
-    width: 50%;
+    width: 100%;
 }
 
 .centrado {
     text-align: center;
+}
+
+.izquierda {
+    text-align: left;
 }
 
 .container {
@@ -63,4 +99,24 @@ form {
     flex-wrap: nowrap;
     justify-content: left;
     padding: 5px;
+    margin-top: 10px;
+}
+
+.bordes {
+    border-radius: 10px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.contenido {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
 }

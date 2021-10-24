@@ -7,14 +7,14 @@
 <link rel="stylesheet" href="formato.css">
 <title>Inicio</title>
 </head>
-<body>
-<div class="titulo">
-	<a href="Inicio.jsp">Inicio</a>
-	<a href="AgregarSeguro.jsp">Agregar seguro</a>
-	<a href="ListarSeguro.jsp">Listar seguros</a>
+<body class="colorTerciario">
+<div class="navbar colorPrimario menu">
+	<a class="colorSecundario separar bordes" href="Inicio.jsp">Inicio</a>
+	<a class="colorSecundario separar bordes" href="AgregarSeguro.jsp">Agregar seguro</a>
+	<a class="colorSecundario separar bordes" href="ListarSeguro.jsp">Listar seguros</a>
 </div>
-<div class="titulo">
-	<h2>Soy la pagina de inicio</h2>
+<div class="contenido">
+	<h2 style="margin-top: 10px; margin-bottom: 10px;">Soy la pagina de inicio</h2>
 </div>
 </body>
 </html>
