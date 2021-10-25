@@ -1,21 +1,23 @@
-package servlets;
+package servlet;
 
 import java.io.IOException;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/servletAgregarSeguros")
-public class servletAgregarSeguros extends HttpServlet {
+/**
+ * Servlet implementation class ServletContratacion
+ */
+@WebServlet("/ServletContratacion")
+public class ServletContratacion extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public servletAgregarSeguros() {
+    public ServletContratacion() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -26,10 +28,6 @@ public class servletAgregarSeguros extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
-		
-//		request.setAttribute("numero", (new SegurosDao()).getProximoID());
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/AgregarSeguro.jsp");
-		dispatcher.forward(request, response);
 	}
 
 	/**

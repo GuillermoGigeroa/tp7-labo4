@@ -1,63 +1,55 @@
 package entidad;
 
 public class Contratacion {
-
-	// Atributos
-
+	
+//	Atributos
+	
 	private int idContratacion;
 	private String nombreUsuario;
 	private int idSeguro;
 	private double costoContratacion;
-
-	// Contructores
+	
+//	Contructores	
 	public Contratacion() {
 		idContratacion = 0;
 		nombreUsuario = "Sin nombre";
 		idSeguro = 0;
 		costoContratacion = 0;
 	}
-
-	public Contratacion(int _idContratacion, String _nombre, int _idSeguro, double _costo) {
+	public Contratacion (int _idContratacion, String _nombre, int _idSeguro, double _costo) {
 		this.idContratacion = _idContratacion;
 		this.nombreUsuario = _nombre;
 		this.idSeguro = _idSeguro;
-		this.costoContratacion = _costo;
+		this.costoContratacion = _costo;	
 	}
-
-	// Getters y Setters
+	
+//	Getters y Setters
 	public int getIdContratacion() {
 		return idContratacion;
 	}
-
 	public void setIdContratacion(int idContratacion) {
 		this.idContratacion = idContratacion;
 	}
-
 	public String getNombreUsuario() {
 		return nombreUsuario;
 	}
-
 	public void setNombreUsuario(String nombreUsuario) {
 		this.nombreUsuario = nombreUsuario;
 	}
-
 	public int getIdSeguro() {
 		return idSeguro;
 	}
-
 	public void setIdSeguro(int idSeguro) {
 		this.idSeguro = idSeguro;
 	}
-
 	public double getCostoContratacion() {
 		return costoContratacion;
 	}
-
 	public void setCostoContratacion(double costoContratacion) {
 		this.costoContratacion = costoContratacion;
 	}
-
-	// metodo hashCode
+	
+//	metodo hashCode
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -70,8 +62,8 @@ public class Contratacion {
 		result = prime * result + ((nombreUsuario == null) ? 0 : nombreUsuario.hashCode());
 		return result;
 	}
-
-	// metodo equals
+	
+//	metodo equals
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -94,8 +86,8 @@ public class Contratacion {
 			return false;
 		return true;
 	}
-
-	// metodo toString
+	
+//	metodo toString
 	@Override
 	public String toString() {
 		return "Contratacion [idContratacion=" + idContratacion + ", nombreUsuario=" + nombreUsuario + ", idSeguro="

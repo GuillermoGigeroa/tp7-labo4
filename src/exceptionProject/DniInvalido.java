@@ -1,21 +1,29 @@
 package exceptionProject;
 
+
 public class DniInvalido extends Exception {
-
+	
+	/**
+	 * 
+	 */
 	private static final long serialVersionUID = 1L;
+	
+	
+//	Constructor
 
-	// Constructor
-
-	public DniInvalido() {
-
+	public DniInvalido()
+	{
+	
 	}
 
-	// Metodo getMessage
-
+	
+//	Metodo getMessage
+	
 	@Override
 	public String getMessage() {
-
+		
 		return "El numero de DNI posee letras";
 	}
+		
 
 }

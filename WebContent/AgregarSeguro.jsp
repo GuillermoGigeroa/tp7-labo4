@@ -1,7 +1,11 @@
+<%@page import="java.util.Iterator"%>
+<%@page import="entidad.Tipo"%>
+<%@page import="daoImpl.TipoSeguroDao"%>
 <%@page import="daoImpl.SegurosDao"%>
+<%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -18,10 +22,10 @@
 		<div class="titulo centrado">
 			<h2>Agregar Seguros</h2>
 		</div>
-		<form action="servletAgregarSeguros" class="centrado">
+		<form action="ServletSeguros" method="post" class="centrado">
 			<ul>
 				<li class="container">
-					<label id="lblSeguro" class="mitad izquierda">
+					<label id="idSeguro" class="mitad izquierda">
 						ID Seguro
 					</label>
 					<label id="txtSeguro" class="mitad centrado">
@@ -30,23 +34,26 @@
 				</li>
 				<li class="container">
 					<label for="descripcion" class="mitad izquierda">Descripcion</label>
-					<input type="text" name="apellido" class="mitad" />
+					<input type="text" id="descripcion" required name="txtDescripcion" class="mitad" />
 				</li>
 				<li class="container">
-					<label class="mitad izquierda">Tipo de seguro</label>
-					<select name="tipoSeguros" class="mitad centrado">
-						<option value="1">Seguro de casas 1</option>
-						<option value="2">Seguro de casas 2</option>
-						<option value="3">Seguro de casas 3</option>
+					<label for="lista" class="mitad izquierda">Tipo de seguro</label>
+					<select name="tipo" id="lista" class="mitad centrado">
+						<%  TipoSeguroDao dao = new TipoSeguroDao();
+						    ArrayList<Tipo> listaTipo = dao.listarTipo();	
+			  			    if (listaTipo != null) {
+			  			    for (Tipo tipo : listaTipo) { %>
+						<option value = "<%= tipo.getIdTipoSeguro() %>"> <%= tipo.getDescripcion() %></option>
+							<%}}%>
 					</select>
 				</li>
 				<li class="container">
-					<label class="mitad izquierda">Costo contratacion</label>
-					<input type="text" name="costoCont" class="mitad" />
+					<label for="costo" class="mitad izquierda">Costo contratacion</label>
+					<input type="number" id="costo" required name="txtCosto" class="mitad" />
 				</li>
 				<li class="container">
-					<label class="mitad izquierda">Costo maximo asegurado</label>
-					<input type="text" name="costoMax" class="mitad" />
+					<label for="costoMax" class="mitad izquierda">Costo maximo asegurado</label>
+					<input type="number" id="costoMax" required name="txtCostoMax" class="mitad" />
 				</li>
 				<li class="container">
 					<label class="mitad">&nbsp;</label>
@@ -54,6 +61,14 @@
 				</li>
 			</ul>
 		</form>
+		<% if(request.getAttribute("funciono") != null) {
+			boolean funciono = (boolean) request.getAttribute("funciono");
+			if(funciono) {
+		%>
+		<label>Se agregó correctamente.</label>
+		<%
+		}}
+		%>
 	</div>
 </body>
 </html>

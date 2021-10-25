@@ -1,40 +1,36 @@
 package entidad;
 
 public class Tipo {
-
-	// Atributos
+	
+//	Atributos
 	private int idTipoSeguro;
 	private String descripcion;
-
-	// Constructores
+	
+//	Constructores
 	public Tipo() {
 		idTipoSeguro = 0;
 		descripcion = "Sin descripcion";
 	}
-
 	public Tipo(int _idTipo, String _descripcion) {
 		this.idTipoSeguro = _idTipo;
 		this.descripcion = _descripcion;
 	}
-
-	// Getters y Setters
+	
+//	Getters y Setters
 	public int getIdTipoSeguro() {
 		return idTipoSeguro;
 	}
-
 	public void setIdTipoSeguro(int idTipoSeguro) {
 		this.idTipoSeguro = idTipoSeguro;
 	}
-
 	public String getDescripcion() {
 		return descripcion;
 	}
-
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
 	}
-
-	// Metodo hashCode
+	
+//	Metodo hashCode
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -43,8 +39,8 @@ public class Tipo {
 		result = prime * result + idTipoSeguro;
 		return result;
 	}
-
-	// Metodo equals
+	
+//	Metodo equals
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -63,8 +59,8 @@ public class Tipo {
 			return false;
 		return true;
 	}
-
-	// Metodo toString
+	
+//	Metodo toString
 	@Override
 	public String toString() {
 		return "Tipo [idTipoSeguro=" + idTipoSeguro + ", descripcion=" + descripcion + "]";

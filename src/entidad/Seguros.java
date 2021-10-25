@@ -2,15 +2,15 @@ package entidad;
 
 public class Seguros {
 
-	// Atributos
+//	Atributos
 	private int idSeguro;
 	private String descripcion;
 	private int idTipo;
 	private double costoContratacion;
 	private double costoAseguradora;
-
-	// Construtores
-
+	
+//	Construtores
+	
 	public Seguros() {
 		idSeguro = 0;
 		descripcion = "Sin descripcion";
@@ -18,7 +18,6 @@ public class Seguros {
 		costoContratacion = 0;
 		costoAseguradora = 0;
 	}
-
 	public Seguros(int _idSeguro, String _descripcion, int _idTipo, double _costoContratacion, double _costoAdicional) {
 		this.idSeguro = _idSeguro;
 		this.descripcion = _descripcion;
@@ -26,50 +25,41 @@ public class Seguros {
 		this.costoContratacion = _costoContratacion;
 		this.costoAseguradora = _costoAdicional;
 	}
-
-	// Settersy Getters
-
+	
+//	Settersy Getters
+	
 	public int getIdSeguro() {
 		return idSeguro;
 	}
-
 	public void setIdSeguro(int idSeguro) {
 		this.idSeguro = idSeguro;
 	}
-
 	public String getDescripcion() {
 		return descripcion;
 	}
-
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
 	}
-
 	public int getIdTipo() {
 		return idTipo;
 	}
-
 	public void setIdTipo(int idTipo) {
 		this.idTipo = idTipo;
 	}
-
 	public double getCostoContratacion() {
 		return costoContratacion;
 	}
-
 	public void setCostoContratacion(double costoContratacion) {
 		this.costoContratacion = costoContratacion;
 	}
-
 	public double getCostoAseguradora() {
 		return costoAseguradora;
 	}
-
 	public void setCostoAseguradora(double costoAseguradora) {
 		this.costoAseguradora = costoAseguradora;
 	}
-
-	// Metodo hashCode
+	
+//	Metodo hashCode
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -84,8 +74,8 @@ public class Seguros {
 		result = prime * result + idTipo;
 		return result;
 	}
-
-	// Metodo equals
+	
+//	Metodo equals
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -110,12 +100,13 @@ public class Seguros {
 			return false;
 		return true;
 	}
-
-	// Metodo toString
+	
+//	Metodo toString
 	@Override
 	public String toString() {
 		return "Seguros [idSeguro=" + idSeguro + ", descripcion=" + descripcion + ", idTipo=" + idTipo
 				+ ", costoContratacion=" + costoContratacion + ", costoAseguradora=" + costoAseguradora + "]";
 	}
-
+	
+	
 }

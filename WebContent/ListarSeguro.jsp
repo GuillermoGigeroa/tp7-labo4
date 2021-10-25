@@ -1,6 +1,10 @@
+<%@page import="entidad.Seguros"%>
+<%@page import="entidad.Tipo"%>
+<%@page import="daoImpl.TipoSeguroDao"%>
+<%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -17,17 +21,21 @@
 		<div class="titulo">
 			<h2>"Tipos de seguros de la base de datos"</h2>
 		</div>
+		<form action="ServletSeguros" method="post">
 		<div class="container centrado">
 			<label class="separar">Busqueda por tipos de Seguros:</label>
-			<select name="tipoSeguros" class="separar">
-				<option value="1">Seguro de casas 1</option>
-				<option value="2">Seguro de casas 2</option>
-				<option value="3">Seguro de casas 3</option>
+			<select name="tipo" class="separar">
+				<%  TipoSeguroDao dao = new TipoSeguroDao();
+				    ArrayList<Tipo> listaTipo = dao.listarTipo();	
+	  			    if (listaTipo != null) {
+	  			    for (Tipo tipo : listaTipo) { %>
+				<option value = "<%= tipo.getIdTipoSeguro() %>"> <%= tipo.getDescripcion() %></option>
+					<%}}%>
 			</select>
 			<input type="submit" name="btnFiltrar" value="Filtrar">
 		</div>
 		<div class="container centrado">
-			<table border="2">
+			<table border="1">
 				<tr>
 					<th>ID seguro</th>
 					<th>Descripcion seguro</th>
@@ -35,22 +43,21 @@
 					<th>Costo contratacion</th>
 					<th>Costo maximo asegurado</th>
 				</tr>
+				<% if(request.getAttribute("ListaSeguros") != null){
+					ArrayList<Seguros> lista = (ArrayList<Seguros>) request.getAttribute("ListaSeguros");
+					for (Seguros s : lista){
+				%>
 				<tr>
-					<td>1</td>
-					<td>null</td>
-					<td>null</td>
-					<td>null</td>
-					<td>null</td>
+					<td><%=s.getIdSeguro()%></td>
+					<td><%=s.getDescripcion()%></td>
+					<td><%=s.getIdTipo()%></td>
+					<td><%=s.getCostoContratacion()%></td>
+					<td><%=s.getCostoAseguradora()%></td>
 				</tr>
-				<tr>
-					<td>2</td>
-					<td>null</td>
-					<td>null</td>
-					<td>null</td>
-					<td>null</td>
-				</tr>
+				<%}}%>
 			</table>
 		</div>
+		</form>
 	</div>
 </body>
 </html>
