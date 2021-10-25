@@ -62,8 +62,7 @@
 			</ul>
 		</form>
 		<% if(request.getAttribute("funciono") != null) {
-			boolean funciono = (boolean) request.getAttribute("funciono");
-			if(funciono) {
+			if((boolean) request.getAttribute("funciono")) {
 		%>
 		<label>Se agregó correctamente.</label>
 		<%

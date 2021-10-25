@@ -29,7 +29,14 @@
 				    ArrayList<Tipo> listaTipo = dao.listarTipo();	
 	  			    if (listaTipo != null) {
 	  			    for (Tipo tipo : listaTipo) { %>
-				<option value = "<%= tipo.getIdTipoSeguro() %>"> <%= tipo.getDescripcion() %></option>
+				<option value = "<%= tipo.getIdTipoSeguro() %>"
+				<% if (request.getAttribute("tipoLista") != null) {
+					if((int) request.getAttribute("tipoLista") == tipo.getIdTipoSeguro()){
+					%>
+						selected			
+					<%  }
+						}%>
+				> <%= tipo.getDescripcion() %></option>
 					<%}}%>
 			</select>
 			<input type="submit" name="btnFiltrar" value="Filtrar">
